@@ -1,0 +1,357 @@
+@import url("./fonts.css");
+
+:root {
+  --purple-50: hsl(257, 56%, 94%);
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --rose-100: hsl(310, 60%, 86%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  --border-radius: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--purple-50);
+  font-family: "DM Sans", sans-serif;
+  width: 100%;
+  color: var(--black);
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  line-height: 1;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+  margin: 1.5rem auto;
+  width: 90%;
+  max-width: 70rem;
+  row-gap: 2rem;
+}
+
+.grid__content1 {
+  background-color: var(--purple-500);
+  border-radius: var(--border-radius);
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+  grid-area: c1;
+}
+
+.grid__content1 h1 {
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 2.2857rem + 1.0714vw, 3.25rem);
+  font-weight: 500;
+}
+
+.grid__content1 span {
+  color: var(--yellow-500);
+}
+
+.grid__content1 img {
+  margin-top: 1.5rem;
+  margin-inline: auto;
+  width: 75%;
+}
+
+.grid__content2 {
+  padding: 0.95rem;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  grid-area: c2;
+}
+.grid__content2 h2 {
+  font-size: clamp(1.5rem, 1.4143rem + 0.4286vw, 1.8rem);
+  margin-top: 0.75rem;
+}
+.grid__content3 {
+  padding: 0.85rem 0.85rem 0 0.85rem;
+  background-color: var(--yellow-500);
+  border-radius: var(--border-radius);
+  grid-area: c3;
+}
+.grid__content3 h2 {
+  font-size: clamp(1.5rem, 1.4429rem + 0.2857vw, 1.7rem);
+}
+
+.grid__content3 img {
+  margin-top: 1rem;
+  width: 70%;
+}
+
+.grid__content4 {
+  background-color: var(--purple-100);
+  border-radius: var(--border-radius);
+  padding: 1.75rem 0.95rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  grid-area: c4;
+}
+.grid__content4 h2 {
+  font-size: clamp(1.5rem, 1.4286rem + 0.3571vw, 1.75rem);
+}
+
+.grid__content5 {
+  padding: 1.5rem 4rem;
+  background-color: var(--purple-500);
+  color: var(--white);
+  text-align: center;
+  border-radius: var(--border-radius);
+  grid-area: c5;
+}
+.grid__content5 h2 {
+  font-size: clamp(1.5rem, 1.2857rem + 1.0714vw, 2.25rem);
+}
+
+.grid__content5 img {
+  margin-bottom: 1.75rem;
+}
+
+.grid__content6 {
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  grid-area: c6;
+}
+
+.grid__content6 h2 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 2.1071rem + 0.7143vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.grid__content6 img {
+  margin-top: 1rem;
+  width: 60%;
+}
+
+.grid__content7 {
+  border-radius: var(--border-radius);
+  background-color: var(--yellow-100);
+  padding: 2.5rem;
+  grid-area: c7;
+}
+
+.grid__content7 h2 {
+  font-size: 1.575rem;
+  font-size: clamp(1.575rem, 1.4536rem + 0.6071vw, 2rem);
+}
+
+.grid__content7 span {
+  color: var(--purple-500);
+}
+
+.grid__content7 img {
+  margin-top: 1rem;
+  width: 65%;
+}
+
+.grid__content8 {
+  background-color: var(--yellow-500);
+  border-radius: var(--border-radius);
+  padding: 1.75rem;
+  grid-area: c8;
+}
+
+.grid__content8 h2 {
+  font-size: 1.575rem;
+  font-size: clamp(1.575rem, 1.4536rem + 0.6071vw, 2rem);
+}
+
+.grid__content8 img {
+  margin-top: 1rem;
+  width: 75%;
+}
+
+@media (width >= 48em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c1"
+      "c1 c1"
+      "c1 c1"
+      "c7 c4"
+      "c7 c4"
+      "c7 c4"
+      "c8 c4"
+      "c8 c4"
+      "c8 c4"
+      "c8 c4"
+      "c2 c6"
+      "c2 c6"
+      "c2 c6"
+      "c3 c5"
+      "c3 c5"
+      "c3 c5";
+    gap: 1.5rem;
+    margin-block: 3rem;
+  }
+}
+
+@media (width >= 68.75em) {
+  h1,
+  h2 {
+    line-height: 1.1;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "c7 c1 c1 c4"
+      "c7 c1 c1 c4"
+      "c7 c1 c1 c4"
+      "c7 c1 c1 c4"
+      "c7 c2 c3 c4"
+      "c8 c2 c3 c4"
+      "c8 c2 c3 c4"
+      "c8 c6 c5 c5"
+      "c8 c6 c5 c5"
+      "c8 c6 c5 c5";
+    gap: 2rem;
+    margin-block: 5rem;
+  }
+
+  .grid__content1 {
+    padding: 3rem 2.5rem;
+  }
+
+  /* .grid__content1 h1 {
+    font-size: 3.25rem;
+  } */
+
+  .grid__content1 img {
+    width: 40%;
+  }
+
+  .grid__content2 {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+  .grid__content2 h2 {
+    /* font-size: 1.8rem; */
+    margin-top: 1rem;
+    padding-right: 1.5rem;
+  }
+  .grid__content2 img {
+    height: 30%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .grid__content3 {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  /* .grid__content3 h2 {
+    font-size: 1.7rem;
+  } */
+
+  .grid__content3 img {
+    width: 80%;
+    position: absolute;
+  }
+
+  .grid__content4 {
+    text-align: start;
+    padding: 2.5rem 0 2.5rem 2rem;
+  }
+  /* .grid__content4 h2 {
+    font-size: 1.75rem;
+  } */
+  .grid__content4 img {
+    height: 57%;
+    object-fit: cover;
+    object-position: left;
+  }
+  .grid__content5 {
+    text-align: left;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .grid__content5 {
+    display: flex;
+    padding: 1rem;
+  }
+  /* .grid__content5 h2 {
+    font-size: 2.25rem;
+  } */
+  .grid__content5 img {
+    width: 40%;
+    margin: 0;
+  }
+
+  .grid__content7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* .grid__content6 h2 {
+    font-size: 2.75rem;
+  } */
+  .grid__content6 img {
+    margin-top: 2rem;
+    width: 80%;
+  }
+  /* .grid__content7 h2 {
+    font-size: 2rem;
+  } */
+  .grid__content7 img {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .grid__content8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* .grid__content8 h2 {
+    font-size: 2rem;
+  } */
+  .grid__content8 img {
+    width: 100%;
+  }
+}
