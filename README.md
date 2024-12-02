@@ -1,5 +1,6 @@
 # Frontend Mentor - Bento grid
-This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj). This challenge hellped me improve my HTML, CSS
+
+This is a solution to the [Bento Grid page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj). This challenge hellped me improve my HTML, CSS
 
 ## Overview
 
